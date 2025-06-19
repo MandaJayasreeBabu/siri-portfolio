@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manda Jayasree | Visionary Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #000428, #004e92);
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    header h1, header p {
+      z-index: 1;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      color: #fff;
+      animation: fadeInDown 1.5s ease-in-out forwards;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #f0f0f0;
+      animation: fadeInUp 2s ease-in-out forwards;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+    nav a:hover {
+      color: #ff8cfc;
+      transform: scale(1.1);
+    }
+    section {
+      padding: 6rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    section.active {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #ffd700;
+    }
+    .highlight {
+      color: #00f9ff;
+    }
+    .skills span, .certs span {
+      display: inline-block;
+      background: #1a1a2e;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 25px;
+      color: #00ffff;
+      border: 1px solid #00f9ff;
+      transition: transform 0.3s ease;
+    }
+    .skills span:hover, .certs span:hover {
+      transform: scale(1.1);
+      background-color: #003f5c;
+    }
+    .project {
+      background: #161b33;
+      margin: 1rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 800px;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transform: scale(0.95);
+      transition: transform 0.4s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    footer {
+      background: #101020;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Manda Jayasree</h1>
+    <p>Innovating Tomorrow | Full Stack & ML Developer | SWE Aspirant</p>
+  </header>
+
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>I’m a <span class="highlight">Computer Science Engineer</span>, currently working as a <strong>Programmer Analyst at Cognizant</strong>. I love building scalable digital products with meaningful impact. With deep interests in backend development, machine learning, and system design, I apply my skills in both enterprise and personal projects.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Tech Stack</h2>
+    <div class="skills">
+      <span>Python</span><span>Java</span><span>C++</span><span>React</span><span>Flask</span><span>TensorFlow</span>
+      <span>PostgreSQL</span><span>MongoDB</span><span>AWS</span><span>Docker</span><span>Git</span><span>REST APIs</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Modern, animated portfolio built using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Analytics Tool</h3>
+      <p>Flask + SQL dashboard for marketing analytics with user authentication.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certs">
+    <h3>Cloud & DevOps</h3>
+    <span>AWS Cloud Architecting – Amazon Web Services (Feb 2024)</span>
+    <span>AWS Cloud Practitioner Essentials – AWS</span>
+    <span>RPA Intern – Blue Prism University</span>
+
+    <h3>Programming & Development</h3>
+    <span>Data Structures in Java – Coding Ninjas</span>
+    <span>Python (Basic) – HackerRank</span>
+    <span>SAP Certified Development Associate – SAP HANA 2.0</span>
+
+    <h3>Cybersecurity</h3>
+    <span>Cybersecurity Essentials – Cisco</span>
+    <span>Introduction to Cybersecurity – Cisco</span>
+
+    <h3>Data & AI</h3>
+    <span>Data Science in Python – Pantech eLearning</span>
+    <span>TensorFlow Developer – Great Learning</span>
+    <span>SQL for Data Analysis – Udemy</span>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mandababu23@gmail.com" style="color:#00f9ff">mandababu23@gmail.com</a></p>
+    <p>Phone: +91 9550757135</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/jsree127/" target="_blank" style="color:#00f9ff">linkedin.com/in/jsree127</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Manda Jayasree. Built for ambition. Inspired by elegance.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    });
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
